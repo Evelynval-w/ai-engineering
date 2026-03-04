@@ -76,7 +76,7 @@ I'm Makuochukwu — a CS student at EPITA Paris building toward an AI engineerin
 
 Find me here:
 - GitHub: [Evelynval-w](https://github.com/Evelynval-w)
-- HuggingFace: [Jane](https://huggingface.co/Jane)
+- HuggingFace: [Evelynval-w](https://huggingface.co/Jane)
 - Twitter: [@EvelynvalMakuo](https://twitter.com/EvelynvalMakuo)
 
 ---
