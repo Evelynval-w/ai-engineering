@@ -1,19 +1,14 @@
 import { useMovies } from '../context/MovieContext'
 
-export default function Tile({ movie }) {
+export default function Tile({ movie, onLoad }) {
   const { openModal } = useMovies()
 
   return (
     <div
       onClick={() => openModal(movie)}
       style={{
-        flex: '0 0 auto',
-        width: '180px',
-        borderRadius: '4px',
-        overflow: 'hidden',
-        cursor: 'pointer',
-        transition: 'transform 0.2s',
-        position: 'relative',
+        width: '180px', borderRadius: '4px', overflow: 'hidden',
+        cursor: 'pointer', transition: 'transform 0.2s', position: 'relative',
       }}
       onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.08)'}
       onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
@@ -22,8 +17,9 @@ export default function Tile({ movie }) {
         src={movie.img}
         alt={movie.title}
         loading="lazy"
+        onLoad={onLoad}
         style={{ width: '100%', height: '270px', objectFit: 'cover', display: 'block' }}
-        onError={e => { e.target.style.backgroundColor = '#333'; e.target.src = '' }}
+        onError={e => { onLoad(); e.target.style.backgroundColor = '#333' }}
       />
       <div style={{
         position: 'absolute', bottom: 0, left: 0, right: 0,
