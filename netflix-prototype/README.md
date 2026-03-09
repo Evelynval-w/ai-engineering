@@ -40,6 +40,14 @@ This project is part of my 12-month AI engineering roadmap. The goal wasn't to c
 | Deployment | Vercel |
 
 ---
+## 📊 Lighthouse Scores (Live)
+
+| Metric | Score |
+|---|---|
+| Performance | 54 |
+| Accessibility | 100 ✅ |
+| Best Practices | 77 |
+| SEO | 90 |
 
 ## 📁 Project Structure
 
