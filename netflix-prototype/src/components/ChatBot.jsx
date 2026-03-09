@@ -33,7 +33,7 @@ Based on the user's mood or request, recommend 2-3 movies from the list above.
 Be conversational, friendly and brief. Mention the title and one sentence why it fits their mood.`
 
       const response = await fetch(
-        'https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3',
+        'https://router.huggingface.co/novita/v3/openai/chat/completions',
         {
           method: 'POST',
           headers: {
@@ -41,14 +41,15 @@ Be conversational, friendly and brief. Mention the title and one sentence why it
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            inputs: prompt,
-            parameters: { max_new_tokens: 300, temperature: 0.7 }
+            model: 'mistralai/Mistral-7B-Instruct-v0.3',
+            messages: [{ role: 'user', content: prompt }],
+            max_tokens: 300,
           })
         }
       )
 
       const data = await response.json()
-      const botReply = data[0]?.generated_text?.replace(prompt, '').trim()
+      const botReply = data.choices?.[0]?.message?.content?.trim()
         || "Sorry, I couldn't think of a recommendation right now. Try again!"
 
       setMessages(prev => [...prev, { role: 'bot', text: botReply }])
@@ -61,7 +62,6 @@ Be conversational, friendly and brief. Mention the title and one sentence why it
 
   return (
     <>
-      {/* Floating button */}
       <button
         onClick={() => setOpen(!open)}
         style={{
@@ -76,7 +76,6 @@ Be conversational, friendly and brief. Mention the title and one sentence why it
         {open ? '✕' : '🎬'}
       </button>
 
-      {/* Chat window */}
       {open && (
         <div style={{
           position: 'fixed', bottom: '92px', right: '24px', zIndex: 200,
@@ -86,7 +85,6 @@ Be conversational, friendly and brief. Mention the title and one sentence why it
           boxShadow: '0 8px 40px rgba(0,0,0,0.8)',
           border: '1px solid #333',
         }}>
-          {/* Header */}
           <div style={{
             padding: '16px', borderBottom: '1px solid #333',
             display: 'flex', alignItems: 'center', gap: '10px',
@@ -98,7 +96,6 @@ Be conversational, friendly and brief. Mention the title and one sentence why it
             </div>
           </div>
 
-          {/* Messages */}
           <div style={{
             flex: 1, overflowY: 'auto', padding: '16px',
             display: 'flex', flexDirection: 'column', gap: '12px',
@@ -131,7 +128,6 @@ Be conversational, friendly and brief. Mention the title and one sentence why it
             )}
           </div>
 
-          {/* Input */}
           <div style={{
             padding: '12px', borderTop: '1px solid #333',
             display: 'flex', gap: '8px',
