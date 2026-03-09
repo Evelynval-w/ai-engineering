@@ -33,7 +33,7 @@ Based on the user's mood or request, recommend 2-3 movies from the list above.
 Be conversational, friendly and brief. Mention the title and one sentence why it fits their mood.`
 
       const response = await fetch(
-        "https://router.huggingface.co/v1",
+        "https://api-inference.huggingface.co/v1/chat/completions",
         {
           method: 'POST',
           headers: {
