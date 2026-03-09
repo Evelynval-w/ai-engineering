@@ -33,7 +33,7 @@ Based on the user's mood or request, recommend 2-3 movies from the list above.
 Be conversational, friendly and brief. Mention the title and one sentence why it fits their mood.`
 
       const response = await fetch(
-        'https://api-inference.huggingface.co/v1/chat/completions',
+        "https://router.huggingface.co/v1",
         {
           method: 'POST',
           headers: {
@@ -41,7 +41,7 @@ Be conversational, friendly and brief. Mention the title and one sentence why it
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            model: 'mistralai/Mistral-7B-Instruct-v0.3',
+            model:"moonshotai/Kimi-K2-Instruct-0905",
             messages: [{ role: 'user', content: prompt }],
             max_tokens: 300,
           })
