@@ -1,5 +1,3 @@
-
-
 ## hugging_face/README.md
 
 
@@ -154,4 +152,3 @@ python3 make_porfolio.py
 Moving into LangChain and RAG systems in Phase 2. The goal is 
 to build a document Q&A tool that can answer questions about 
 any PDF — starting with financial reports and legal contracts.
-
