@@ -1,7 +1,7 @@
 #  EVFLIX — Netflix Clone
 
 > A fully functional Netflix-inspired streaming UI built with React, Vite, and the HuggingFace AI API.  
-> **Live Demo → [evflix.vercel.app](https://evflix.vercel.app)**
+> **Live Demo → [evflix.vercel.app](https://evfix-seven.vercel.app/)**
 
 ---
 
