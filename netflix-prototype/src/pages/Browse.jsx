@@ -20,6 +20,7 @@ export default function Browse() {
         ))}
       </div>
       {selectedMovie && <Modal />}
+      <ChatBot />
     </div>
   )
 }
