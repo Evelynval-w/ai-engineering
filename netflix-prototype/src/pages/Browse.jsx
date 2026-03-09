@@ -2,6 +2,10 @@ import { useMovies } from '../context/MovieContext'
 import Navbar from '../components/Navbar'
 import Row from '../components/Row'
 import Modal from '../components/Modal'
+import ChatBot from '../components/ChatBot'  // add at top
+
+
+
 
 export default function Browse() {
   const { genres, getByGenre, selectedMovie } = useMovies()
