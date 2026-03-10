@@ -1,4 +1,4 @@
-# 🤖 AI Engineering Journey
+# AI Engineering Journey
 
 Hey! This is where I'm documenting everything I'm building as I learn AI engineering from scratch. I started this on March 2nd, 2026 — and the goal is simple: by March 2027, I want to be a working AI engineer in Paris.
 
@@ -8,7 +8,7 @@ Every folder here is a real project I built with my own hands. No copy-paste tut
 
 ## What's Inside
 
-### 🐍 `hugging_face/`
+###  `hugging_face/`
 This is where it all started. My first ever AI API calls, image generation, and chatbots — all built in one day using HuggingFace's Inference API.
 
 | File | What it does |
@@ -63,10 +63,10 @@ npm run dev
 
 This repo is growing with me. Here's what's coming:
 
-- ✅ **Phase 1 (Now):** LLM calls, image generation, chatbots
-- 🔄 **Phase 2 (Months 3-4):** LangChain, RAG systems, document Q&A
-- ⏳ **Phase 3 (Months 5-7):** Contract analyzer, financial AI, credit risk upgrade
-- ⏳ **Phase 4 (Months 8-9):** FastAPI, Docker, cloud deployment
+- **Phase 1 (Now):** LLM calls, image generation, chatbots
+- **Phase 2 (Months 3-4):** LangChain, RAG systems, document Q&A
+- **Phase 3 (Months 5-7):** Contract analyzer, financial AI, credit risk upgrade
+- **Phase 4 (Months 8-9):** FastAPI, Docker, cloud deployment
 
 ---
 
